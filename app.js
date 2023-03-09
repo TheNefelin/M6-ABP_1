@@ -1,4 +1,3 @@
-
 const pagos = [
     {dia:"Domingo", monto: 0, hrs: 0},
     {dia:"Lunes", monto: 7100, hrs: 7},
@@ -10,8 +9,8 @@ const pagos = [
 ];
 
 process.stdout.write(`---------------------------------------- \n`)  
-let preguntas =["Fecha Inicio - Formato (AAAA/MM/DD) \n", "Fecha Termino - Formato (AAAA/MM/DD) \n"];
-let respuestas =[];
+let preguntas = ["Fecha Inicio - Formato (AAAA/MM/DD) \n", "Fecha Termino - Formato (AAAA/MM/DD) \n"];
+let respuestas = [];
 
 function preguntar(indice){
     process.stdout.write(preguntas[indice])
@@ -20,7 +19,7 @@ function preguntar(indice){
 process.stdin.on('data', (data) => {
     const fecha = new Date(data.toString().trim())
     // AAAA/MM/DD
-    respuestas.push(fecha) 
+    respuestas.push(fecha);
     if(respuestas.length < preguntas.length){
         preguntar(respuestas.length);
     }else{
@@ -68,3 +67,4 @@ process.stdin.on('data', (data) => {
 });
 
 preguntar(0);
+
