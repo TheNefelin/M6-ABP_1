@@ -25,7 +25,7 @@ process.stdin.on('data', (data) => {
         preguntar(respuestas.length);
     }else{
         if (respuestas[0] > respuestas[1]) {
-            process.stdout.write(`---------------------------------------- \n`);2023
+            process.stdout.write(`---------------------------------------- \n`);
             process.stdout.write("Fecha Inicio no debe ser mayor a Fecha termino \n");
             process.stdout.write(`---------------------------------------- \n`);
             respuestas = [];
