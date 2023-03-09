@@ -17,7 +17,7 @@ function preguntar(indice){
     process.stdout.write(preguntas[indice])
 };
 
-process.stdin.on('data', (data)=>{
+process.stdin.on('data', (data) => {
     const fecha = new Date(data.toString().trim())
     // AAAA/MM/DD
     respuestas.push(fecha) 
@@ -25,7 +25,9 @@ process.stdin.on('data', (data)=>{
         preguntar(respuestas.length);
     }else{
         if (respuestas[0] > respuestas[1]) {
-            process.stdout.write("Fecha Inicio no debe ser mayor a Fecha termino \n")
+            process.stdout.write(`---------------------------------------- \n`);2023
+            process.stdout.write("Fecha Inicio no debe ser mayor a Fecha termino \n");
+            process.stdout.write(`---------------------------------------- \n`);
             respuestas = [];
             preguntar(0);
         } else {
