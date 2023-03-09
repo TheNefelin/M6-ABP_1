@@ -60,7 +60,7 @@ function respuesta(f1, f2) {
         process.stdout.write(`\n`)       
         process.stdout.write(`TOTAL: ${semanaTotal + sabTotal} \n ---------------------------------------- \n`)  
 
-        process.exit(); 
+        process.exit();
     };
 };
 
